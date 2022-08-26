@@ -3,6 +3,9 @@ import "./styles.css";
 const onClickAdd = () => {
   //テキストボックスの値を取得し初期化
   const inputText = document.getElementById("add-text").value;
+
+  if (!inputText) return;
+
   document.getElementById("add-text").value = "";
 
   createIncompleteList(inputText);
